@@ -1,13 +1,11 @@
 function capitalWords(params) {
-    var words, answer;
-    var arrayStrings = params.split(" ", params.length);
-    console.log(arrayStrings[0]);
+    var answer = '';
+    var arrayStrings = params.toLowerCase().split(" ", params.length);
     for (var i = 0; i < arrayStrings.length; i++) {
-        answer = arrayStrings[i].replace(params[0], params[0].toUpperCase());
-        
-    }
+        arrayStrings[i] = arrayStrings[i].replace(arrayStrings[i][0], arrayStrings[i][0].toUpperCase());
+        answer +=arrayStrings[i] + " ";
+   }
     return console.log(answer);
 }
-var tempeString = "I am cool";
-// var espace = " ";
+var tempeString = "I am COOL like a ganster";
 capitalWords(tempeString);

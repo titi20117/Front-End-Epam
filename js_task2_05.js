@@ -1,6 +1,6 @@
 function maxElements(params) {
-    var maxElement = 22;
-    for (var i = 0; i < params.length; i++) {
+    var maxElement = params[0];
+    for (var i = 1; i < params.length; i++) {
         if (maxElement < params[i]) {
             maxElement = params[i];
         } else {

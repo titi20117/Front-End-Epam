@@ -1,29 +1,30 @@
+"use strict";
 function simpleNumber(params) {
-    var num = params;
-    var firstAnswer, secondAnswer;
-    if (num <= 1000) {
-        for (var i = 2; i <= num - 1; i++) {
-            var restNumber = 0;
-            restNumber = num % i;
-            switch (restNumber) {
-                case 0:
-                    firstAnswer = "составное число";                
-                    break;
-                default:
-                    firstAnswer = "простое число";                
-                    break;
+    var num = params, sumRestDiv = 0;
+    var firstAnswer;
+    if (num > 0 && num <= 1000) {
+        for (var i = 1; i <= num; i++){
+            if (num % i === 0) {
+                sumRestDiv += 1;                
             }
-            // if (restNumber == 0) {
-            //     firstAnswer = console.log("составное число");
-            // } else {
-            //     secondAnswer = console.log("простое число");     
-            // }    
-            
         }
-
+        if (sumRestDiv < 3) {
+            firstAnswer = num + " простое число";
+        } else {
+            firstAnswer = num + " составное число";
+        }   
     } else {
         firstAnswer = "Неверные данные";
     }
     return console.log(firstAnswer);
 }
-simpleNumber(100);
+
+console.log("\nпроверяем является пристым или составным !\n")
+simpleNumber(999);
+simpleNumber(1000);
+simpleNumber(1001);
+simpleNumber(5000);
+simpleNumber(111);
+simpleNumber(1);
+simpleNumber(5);
+simpleNumber(101);

@@ -1,116 +1,58 @@
 var calculator = function () {
     var currentState = 0;
     var getObj = {
-        // sum : function(){
-        //     for (var i = 0; i < arguments.length; i++) {
-        //         currentState += arguments[i];
-        //     }
-        //     return console.log("Сумма = " + currentState);
-        // },
-        dif : function(){
-            if (currentState === 0) {
-                currentState = arguments[0];
-                console.log(currentState);
-                for (var i = 1; i < arguments.length; i++) { 
-                    currentState -=arguments[i];
-                 }    
-            } else {
-                for (var i = 0; i < arguments.length; i++) { 
-                    currentState -=arguments[i];
-                 }
-            }
-            
-             return console.log("Вычитание = " + currentState);
+        sum : function sum(args){
+            currentState += args;
+            return sum;
         },
-        div : function(){
+        dif : function dif(args){
             if (currentState === 0) {
-                currentState = arguments[0];
-                for (var i = 1; i < arguments.length; i++) {
-                    if (arguments[i] === 0) {
-                        currentState = "Операция не возможно!"
-                    } else {
-                        currentState /= arguments[i];    
-                    }
-                 }
-            } else {
-                for (var i = 0; i < arguments.length; i++) {
-                    if (arguments[i] === 0) {
-                        currentState = "Операция не возможно!"
-                    } else {
-                        currentState /= arguments[i];    
-                    }
-                 }
+                currentState = args;
+            } else { 
+                 currentState -=args;
             }
-            return console.log("Деление = " + currentState);
+             return dif;
         },
-        mul : function(){
+        div : function div(args){
             if (currentState === 0) {
-                currentState = arguments[0];
-                for (var i = 1; i < arguments.length; i++) {
-                    currentState *= arguments[i];
-                 }
+                currentState = args;
             } else {
-                for (var i = 0; i < arguments.length; i++) {
-                    currentState *= arguments[i];
-                 }
+                if (args === 0) {
+                    currentState = "Операция не возможно!"
+                } else {
+                    currentState /= args;    
+                }
             }
-           
-             return console.log("Умножение = " + currentState);
+            return div;
         },
-        reset : function(){
+        mul : function mul(args){
+            if (currentState === 0) {
+                currentState = args;
+            } else {
+                currentState *= args;
+            }
+             return mul;
+        },
+        getResult : function getResult() {
+            return currentState;
+        },
+        reset : function reset(){
             return currentState = 0;
-        },
-        
-        sum : function sum(a) {
-            if (currentState === 0) {
-                currentState = a;
-                function f(b) {
-                  currentState += b;
-                  return f;
-                }
-                f.toString = function() {
-                  return console.log(currentState);
-                };
-              
-                return f;
-              }  else {
-                function f(b) {
-                  currentState += b;
-                  return f;
-                }
-                f.toString = function() {
-                  return console.log(currentState);
-                };
-              
-                return f;
-              }
-            
-        }
-              
+        },         
     }    
     return getObj;
 }
 
 
 var myCalculator = calculator();
-// console.log("вычислим сумму чисел :");
-// myCalculator.sum(1, 2, 3);
-console.log("\nвычислим вычитание чисел :");
-myCalculator.dif(30, 20);
+console.log("\nвычитание чисел :");
+myCalculator.dif(30);
+console.log(myCalculator.getResult());
 console.log("\nReset");
 console.log(myCalculator.reset());
-console.log("\nвычислим деление чисел :");
-myCalculator.div(6, 2);
-console.log("\nВычислим умножение чисел :");
-myCalculator.mul(2, 2);
-console.log("\nReset");
-console.log(myCalculator.reset());
-console.log("\nВычислим умножение чисел :");
-myCalculator.mul(4, 2);
-// console.log("вычислим сумму чисел :");
-// myCalculator.sum(1, 2, 3);
-console.log("\nвычислим деление чисел :");
-myCalculator.div(6, 2);
-console.log("\nВычислим умножение чисел :");
-myCalculator.mul(2, 2);
+console.log("\nделение чисел :");
+myCalculator.div(6)(2);
+console.log(myCalculator.getResult());
+console.log("\nСуммы чисел :");
 myCalculator.sum(5)(9)(8)(0);
+console.log(myCalculator.getResult());

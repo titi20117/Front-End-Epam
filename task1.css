@@ -1,0 +1,33 @@
+h1 {
+    font-family: "Times New Roman";
+    text-align: center;
+}
+.verdana{
+    font-family: "Verdana";
+    color: blue;
+    font-size: 12px;
+}
+.bloc_page {
+    width: 1200px;
+    margin: auto;
+}
+.image{
+    font-family: "Arial";
+    color : green;
+}
+q {
+    font-family: "Courier New"
+}
+
+.article p {
+    font-family: "Georgia"
+}
+
+body {
+    background-image: url('font1.jpg');
+    color: white;
+}
+
+.multimedia {
+    display: flex;
+}

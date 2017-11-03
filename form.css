@@ -1,0 +1,106 @@
+#bloc_page {
+    position: absolute;
+    left: 35%;
+    top: 25%;
+}
+legend {
+    font-size: 20px;
+    font-weight: bolder;
+    line-height:12px;
+}
+legend em {
+    font-size: 8px;
+    color: red;
+    font-style: normal;
+}
+.tiret{
+    border-bottom: 3px solid black;
+    width: 400px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.space_enter{
+    margin-bottom: 20px;
+}
+  
+  label {
+    font-weight: bold;
+    color: #211e1e;
+    font-size: 12px;
+  }
+  input {
+      border: 1px solid black;
+      border-radius: 4px;
+      height: 25px;
+      width: 204px;
+      padding-left: 10px;
+  }
+  input[name="by_email"], input[name="by_name"] {
+    position: relative;
+    left: 30px;
+  }
+  input[name="by_website"]{
+      position: relative;
+      left: 20px;
+  }
+  label[for="by_message"] {
+      position: relative;
+      bottom: 70px;
+  }
+  textarea[name="by_message"] {
+      position: relative;
+      left: 18px;
+      border: 1px solid black;
+      border-radius: 8px;
+      padding-left: 10px;  
+  }
+  button[name="submit"] {
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 93px;
+    height: 25px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: rgba(214, 207, 207, 0.31);
+    position: relative;
+    left: 43px;
+
+  }
+
+  .get_hint {
+    position: absolute;
+    left: 295px;
+    margin-top: 3px;
+    background-color: red;
+    color: white;
+    height: 21px;
+    font-size: 12px;
+    width: 100px;
+    text-align: center;
+    line-height: 1.7em;
+      
+  }
+
+  .arrow-left {
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent; 
+    border-right:10px solid red;
+    position: absolute;
+    left: 290px;
+    margin-top: -25px; 
+  }
+
+input:valid ~ .arrow-left {
+    display: none;
+}
+
+input:valid ~ .get_hint {
+    display: none;
+}
+  
+input:valid {
+    border: 2px solid rgb(11, 224, 82);
+}

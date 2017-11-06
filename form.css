@@ -93,11 +93,7 @@ legend em {
     margin-top: -25px; 
   }
 
-input:valid ~ .arrow-left {
-    display: none;
-}
-
-input:valid ~ .get_hint {
+input:valid ~ .arrow-left, input:valid ~ .get_hint {
     display: none;
 }
   

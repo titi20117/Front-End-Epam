@@ -1,0 +1,48 @@
+
+@keyframes myRotate {
+    0% {
+        transform: rotate(0);
+        transform: scale(2);
+        width: 100px;
+        border-radius: 50%;
+        background: radial-gradient(circle, white, maroon, green);
+        
+        
+        
+    }
+
+    50% {
+        transform: rotate(60deg);
+        border-radius: 100%;
+        transform: skewX(30deg);
+        transition-duration: 2s;
+        background: radial-gradient(circle, red, yellow, green);
+        
+    }
+
+    100% {
+        transform: translateX(150px) rotate(30deg);
+        background: radial-gradient(circle, blue, violet, chocolate);
+        
+    }   
+}
+body {
+    background-color: black;
+}
+.circle_with_gradient {
+    height: 300px;
+    width:300px;
+    background: red;
+    background: -webkit-radial-gradient(circle, red, yellow, green);
+    background: -o-radial-gradient(circle, red, yellow, green);
+    background: -moz-radial-gradient(circle, red, yellow, green);
+    background: radial-gradient(circle, red, yellow, green);
+    border-radius: 50%;
+    animation-name: myRotate;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+    animation-direction: alternate-reverse;
+    position: absolute;
+    top: 30%;
+    left: 27%; 
+}

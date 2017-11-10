@@ -1,0 +1,221 @@
+body {
+    margin: 0;
+}
+
+#block_page {
+    margin: auto;
+    width: 100%;
+    align-items: center;
+    overflow: hidden;
+}
+header {
+    height: 250px;
+    width: auto;
+    margin-top: 10px;
+    
+}
+
+#hamburger {
+    display: none;
+}
+
+section img {
+    width: 100%;
+}
+
+img[src="cutted_Desktop.jpg"] {
+    display: block
+}
+
+img[src="cutted_tablet.jpg"] {
+    display: none;
+}
+
+.first_head {
+    display: flex;
+    height: 157px;
+}
+
+.second_head {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    border-top: 1px solid rgba(243, 240, 240, 0.96);
+    height: 92px;
+}
+
+
+.logo {
+    position: absolute;
+    left: 25%;
+    top: 30px;
+
+}
+
+.logo h1 {
+    font-size: 27px;
+    font-weight: normal;
+    color: #117fb1;
+    border: 1px solid transparent;
+    width: 196px;
+    background-color: lightgrey;
+    height: 30px;
+    text-align: center;
+}
+
+.contact {
+    position: relative;
+    left: 72%;
+    top: 23%;
+    word-spacing: 25px;
+}
+
+.contact span {
+    width: 10%;
+}
+
+.second_head  ul{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    position: absolute;
+    left: 137px;
+    list-style-type: none;
+}
+
+.second_head ul li {
+    border-right: 1px solid rgba(243, 240, 240, 0.96);
+    line-height: 69px;    
+}
+
+.second_head ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+#telefon {
+    font-size: 27px;
+}
+#courriel {
+    font-size: 27px;
+}
+
+.form_search {
+    position: absolute;
+    left: 70%;
+    top: 13px;
+}
+
+label[for="my_search"] {
+    font-size: 44px;
+    color: grey;
+}
+
+input[name="my_search"] {
+    border: none;
+}
+
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent; 
+    border-bottom:10px solid blue;
+    position: absolute;
+    left: 188px;
+    top: 82px;
+    visibility: visible;
+  }
+
+  li:hover {
+      color: blue;
+      cursor: pointer;
+  }
+
+  .big_container {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    position: absolute;
+    left: 139px;
+    text-align: justify;
+  }
+
+  .container {
+      display: flex;
+      width: 40%;
+  }
+
+  img[alt="location"] {
+    height: 29px;
+    width: 28px;
+  }
+
+  input {
+      font-style: italic;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    img[src="cutted_Desktop.jpg"] {
+        display: none;
+    }
+    img[src="cutted_tablet.jpg"] {
+        display: block;
+    }
+
+    .big_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: auto;
+        position: absolute;
+        left: 0;
+        text-align: justify;
+        margin-left: 10px;
+        margin-left: 134px;        
+        
+      }
+    
+      .container {
+          width: 80%;
+      }
+
+      img[src="lamp.jpg"], img[src="tree.jpg"]{
+          position: relative;
+          top: 20px;
+      }
+
+      .second_head ul, .arrow-up, .contact {
+          display: none;
+      }
+
+      .second_head {
+          border: none;
+          height: 2px;
+      }
+
+      .form_search {
+        position: absolute;
+        left: 80%;
+        top: -160px;    
+    }
+
+    header {
+        height: 70px;
+        width: 100%;
+    }
+
+    .logo {
+        position: absolute;
+        left: 39%;
+        top: 0;
+    }
+    #hamburger {
+        display: block;
+        position: absolute;
+        top: -12px;
+        left: 42px;
+        font-size: 69px;
+        color: #117fb1;
+    }
+  }

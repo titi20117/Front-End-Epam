@@ -1,0 +1,24 @@
+{
+  "name": "fernand",
+  "version": "1.0.0",
+  "description": "* [React.js](https://reactjs.org/) - библиотека для разработки интерфейсов.\r * [Node.js](https://nodejs.org/en/) - программная платформа, основанная на движке V8 (транслирующем JavaScript в машинный код). Проще говоря, это среда для выполнения вашего JavaScript кода. В этой лабе мы используем Node.js для создания сервера.\r * [JSON](http://www.json.org/json-ru.html) - популярный формат обмена данными.\r * [npm](https://www.npmjs.com/) - менеджер пакетов. Он помогает нам управлять модулями. Например, загрузить нужную версию React.js. А с помощью npm-scripts можно собрать проект, запустить тесты и т.д.\r * [Express](http://expressjs.com/ru/) - Node.js-фреймворк в котором есть множество HTTP-методов. Он облегчит нам процесс создания API нашего приложения.",
+  "main": "server.js",
+  "scripts": {
+    "api": "node server.js",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "author": "titi20117",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.13"
+  }
+}
